@@ -9,11 +9,13 @@ class FindByClassTagName():
         driver.get(baseUrl)
 
         elementByClassName = driver.find_element_by_class_name("displayed-class")
+        elementByClassName.send_keys("Test")
 
         if elementByClassName is not None:
             print("Element by ClassName found")
 
-        elementByTagName = driver.find_element_by_tag_name("a")
+        elementByTagName = driver.find_element_by_tag_name("h1")
+        print(elementByTagName.text)
 
         if elementByTagName is not None:
             print("Element by TagName found")
